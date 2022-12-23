@@ -27,7 +27,7 @@ namespace Epam.TestAutomation.Elements
         public List<T> GetElements()
         {
             UpdateElements();
-            return _elements;
+            return _elements.ToList();
         }
 
         public List<TResult> Select<TResult>(Func<T, TResult> func)
@@ -38,7 +38,7 @@ namespace Epam.TestAutomation.Elements
 
         private void UpdateElements()
         {
-            if (_elements.Count != 0) return;
+            if (_elements.ToList().Count != 0) return;
             var findedElements = FindElements(_locator);
             foreach (var findedElement in findedElements)
             {

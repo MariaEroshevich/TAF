@@ -1,5 +1,5 @@
-﻿using OpenQA.Selenium;
-using ReportPortal.TestAutomation.Enums;
+﻿using Epam.TestAutomation.Enums;
+using OpenQA.Selenium;
 
 namespace Epam.TestAutomation.Core.Browser
 {

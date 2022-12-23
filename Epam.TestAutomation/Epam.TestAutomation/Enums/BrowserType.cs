@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace ReportPortal.TestAutomation.Enums
+namespace Epam.TestAutomation.Enums
 {
     public enum BrowserType
     {

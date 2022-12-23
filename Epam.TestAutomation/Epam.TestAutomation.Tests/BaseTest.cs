@@ -14,7 +14,8 @@ namespace Epam.TestAutomation.Tests
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
-            //Logger.InitLogger(TestSettings.LogsPath);
+            Logger.InitLogger(TestContext.CurrentContext.Test.Name, TestContext.CurrentContext.TestDirectory);
+
         }
 
         [SetUp]
@@ -31,7 +32,7 @@ namespace Epam.TestAutomation.Tests
             if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
             {
                 Logger.Info("Test is failed");
-                BrowserFactory.Browser.SaveScreenshoot(TestContext.CurrentContext.Test.MethodName, Path.Combine(TestContext.TestDirectory, TestSettings.ScreenShotPath));
+                BrowserFactory.Browser.SaveScreenshoot(TestContext.CurrentContext.Test.MethodName, Path.Combine(TestContext.CurrentContext.TestDirectory, TestSettings.ScreenShotPath));
             }
             Logger.Info("Test finish");
             BrowserFactory.Browser.Quit();

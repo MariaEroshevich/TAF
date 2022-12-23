@@ -34,24 +34,6 @@ namespace Epam.TestAutomation.Elements
             OriginalWebElement.Click();
         }
 
-        public T Click<T>() where T : BasePage
-        {
-            try
-            {
-                OriginalWebElement.Click();
-                var page = Activator.CreateInstance<T>();
-                Waiters.WaitForPageLoad();
-                Waiters.WaitForCondition(page.IsOpened);
-                Logger.Info($"{page} page is opened");
-                return page;
-            }
-            catch (Exception e)
-            {
-                Logger.Info(e.Message);
-                throw;
-            }
-        }
-
         public void SendKeys(string text)
         {
             OriginalWebElement.SendKeys(text);

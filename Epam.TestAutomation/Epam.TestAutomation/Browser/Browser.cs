@@ -88,7 +88,16 @@ namespace Epam.TestAutomation.Core.Browser
 
         public void SaveScreenshoot(string screenshotName, string folderPath)
         {
-            ScreenshotTaker.TakeScreenshot(_driver, screenshotName, folderPath);
+            try
+            {
+                Logger.Info("Generating of screenshot started.");
+                ScreenshotTaker.TakeScreenshot(_driver, screenshotName, folderPath);
+                Logger.Info("Generating of screenshot finished.");
+            }
+            catch (Exception ex)
+            {
+                Logger.Info($"Failed to capture screenshot. Exception message {ex.Message}");
+            }
         }
 
         #endregion

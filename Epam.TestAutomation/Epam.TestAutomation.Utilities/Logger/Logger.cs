@@ -1,32 +1,25 @@
-﻿using Serilog;
+﻿
+using Serilog;
 
 namespace Epam.TestAutomation.Utilities.Logger
 {
     public static class Logger
     {
-        private static ThreadLocal<List<string>> _logs = new ThreadLocal<List<string>>(() => new List<string>());
+        private static ILogger _logger = null;
 
         public static void Info(string message)
         {
-            _logs.Value.Add(message);
+            _logger.Information(message);
         }
 
-        public static void InitLogger(string filePath)
+        public static void InitLogger(string loggerName, string pathToFolder)
         {
-            if (!Directory.Exists(filePath))
-            {
-                Directory.CreateDirectory(filePath);
-            }
+            Directory.CreateDirectory(pathToFolder);
 
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug().WriteTo.File(Path.Combine(filePath, "logs.txt"))
+            _logger = new LoggerConfiguration()
+                .WriteTo.File(Path.Combine(pathToFolder, loggerName + ".txt"), rollingInterval: RollingInterval.Day)
                 .CreateLogger();
-        }
 
-        public static void FinishTestLog()
-        {
-            _logs.Value.ForEach(x => Log.Logger.Information(x));
-            _logs.Value.Clear();
         }
     }
 }
