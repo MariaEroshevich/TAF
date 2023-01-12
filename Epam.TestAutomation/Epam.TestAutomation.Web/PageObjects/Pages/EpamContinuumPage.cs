@@ -13,8 +13,6 @@ namespace Epam.TestAutomation.Web.PageObjects.Pages
     {
         public Label Title => new Label(By.XPath("//span[@class = 'rte-text-animation live-text']//*[@class = 'font-size-56']"));
 
-        public Button AcceptAllCookiesButton => new Button(By.Id("onetrust-accept-btn-handler"));
-
         public override bool IsOpened()
         {
             return Title.IsDisplayed();

@@ -23,6 +23,11 @@ namespace Epam.TestAutomation.Core.Browser
             ExecuteScript("arguments[0].scrollIntoView(true);", element);
         }
 
+        public void ScrollBy(int px)
+        {
+            ExecuteScript($"window.scrollBy(0, {px});");
+        }
+
         public void Back()
         {
             Logger.Info("Navigate Back");
