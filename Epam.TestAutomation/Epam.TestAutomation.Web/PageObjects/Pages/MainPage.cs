@@ -11,6 +11,8 @@ namespace Epam.TestAutomation.Web.PageObjects.Pages
 
         public FooterBlock FooterBlock => new FooterBlock(By.XPath("//*[@class='footer section']"));
 
+        public HeaderBlock HeaderBlock => new HeaderBlock(By.XPath("//*[@class = 'header__content']"));
+
         public override bool IsOpened()
         {
             throw new NotImplementedException();

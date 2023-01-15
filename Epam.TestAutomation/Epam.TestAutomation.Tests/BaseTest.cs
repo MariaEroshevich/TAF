@@ -23,6 +23,7 @@ namespace Epam.TestAutomation.Tests
         {
             Logger.Info("Test begin");
             BrowserFactory.Browser.GotToUrl(TestSettings.ApplicationUrl);
+            BrowserFactory.Browser.Refresh();
             Waiters.WaitForPageLoad();
         }
 
