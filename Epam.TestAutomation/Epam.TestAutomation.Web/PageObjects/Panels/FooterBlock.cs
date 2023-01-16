@@ -15,5 +15,11 @@ namespace Epam.TestAutomation.Web.PageObjects.Panels
         {
             return FooterLinks.GetElements().Where(x => x.GetText().ToLower().Equals(footerLinkName.ToLower())).FirstOrDefault();
         }
+
+        public void ClickOnLink(string linkName)
+        {
+            var link = GetFooterLinkByName(linkName);
+            link.Click();
+        }
     }
 }

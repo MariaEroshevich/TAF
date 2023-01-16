@@ -1,15 +1,25 @@
-﻿using System.Collections.ObjectModel;
-using Epam.TestAutomation.Core.Browser;
+﻿using Epam.TestAutomation.Core.Browser;
 using Epam.TestAutomation.Elements;
 using OpenQA.Selenium;
+using System.Collections.ObjectModel;
 
 namespace Epam.TestAutomation.Core.BasePage
 {
     public abstract class BasePage
     {
-        public Button AcceptAllCookiesButton => new Button(By.Id("onetrust-accept-btn-handler"));
+        public abstract string Url { get; }
 
-        public abstract bool IsOpened();
+        public Button AcceptAllCookiesButton => new Button(By.XPath("//*[@id = 'onetrust-accept-btn-handler']"));
+
+        public bool IsOpened()
+        {
+            return BrowserFactory.Browser.GetUrl().Equals(Url);
+        }
+
+        public void AcceptAllCookies()
+        {
+            AcceptAllCookiesButton.Click();
+        }
 
         public IWebElement FindElement(By by)
         {

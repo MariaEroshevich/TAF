@@ -42,7 +42,7 @@ namespace Epam.TestAutomation.Tests
 
         private static List<FooterLinkModel> GetFooterLinks()
         {
-            return JsonParser.DeserializeJsonToObjects<FooterLinkModel>(@"C:\Users\Maryia_Yerashevich\IT-Academy\Repositories\TAF\Epam.TestAutomation\Epam.TestAutomation.TestData\FooterLinks.json").ToList();
+            return JsonParser.DeserializeJsonToObjects<FooterLinkModel>(@"C:\EPAM_Data\Tuition\TAF\Epam.TestAutomation\Epam.TestAutomation.TestData\FooterLinks.json").ToList();
         }
     }
 }

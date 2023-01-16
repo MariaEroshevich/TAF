@@ -11,11 +11,8 @@ namespace Epam.TestAutomation.Web.PageObjects.Pages
 {
     public class EpamContinuumPage : BasePage
     {
-        public Label Title => new Label(By.XPath("//span[@class = 'rte-text-animation live-text']//*[@class = 'font-size-56']"));
+        public override string Url => "https://www.epam.com/services/consult-and-design";
 
-        public override bool IsOpened()
-        {
-            return Title.IsDisplayed();
-        }
+        public Label Title => new Label(By.XPath("//span[@class = 'rte-text-animation live-text']//*[@class = 'font-size-56']"));
     }
 }

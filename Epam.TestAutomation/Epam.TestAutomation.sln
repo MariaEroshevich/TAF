@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Core", "Epam.TestAutomation\Epam.TestAutomation.Core.csproj", "{C28B174E-8BE2-4466-970E-FAD1B0915B46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Core", "Epam.TestAutomation\Epam.TestAutomation.Core.csproj", "{C28B174E-8BE2-4466-970E-FAD1B0915B46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Utilities", "Epam.TestAutomation.Utilities\Epam.TestAutomation.Utilities.csproj", "{D1422E36-1558-40F5-A3DC-AA1D661066A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Utilities", "Epam.TestAutomation.Utilities\Epam.TestAutomation.Utilities.csproj", "{D1422E36-1558-40F5-A3DC-AA1D661066A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Web", "Epam.TestAutomation.Web\Epam.TestAutomation.Web.csproj", "{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Web", "Epam.TestAutomation.Web\Epam.TestAutomation.Web.csproj", "{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Tests", "Epam.TestAutomation.Tests\Epam.TestAutomation.Tests.csproj", "{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Tests", "Epam.TestAutomation.Tests\Epam.TestAutomation.Tests.csproj", "{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.TestData", "Epam.TestAutomation.TestData\Epam.TestAutomation.TestData.csproj", "{CEBC606A-9A57-4909-87CC-3A52BD87365E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.TestData", "Epam.TestAutomation.TestData\Epam.TestAutomation.TestData.csproj", "{CEBC606A-9A57-4909-87CC-3A52BD87365E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.Tests.BDD", "Epam.TestAutomation.Tests.BDD\Epam.TestAutomation.Tests.BDD.csproj", "{91F5025A-8B1D-461B-8733-4C45ECE82287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F5025A-8B1D-461B-8733-4C45ECE82287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F5025A-8B1D-461B-8733-4C45ECE82287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F5025A-8B1D-461B-8733-4C45ECE82287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F5025A-8B1D-461B-8733-4C45ECE82287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
