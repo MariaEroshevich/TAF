@@ -1,5 +1,4 @@
-﻿using System.IO;
-using Epam.TestAutomation.Core.Browser;
+﻿using Epam.TestAutomation.Core.Browser;
 using Epam.TestAutomation.Helper;
 using Epam.TestAutomation.Utilities.Logger;
 using Epam.TestAutomation.Utils;
@@ -15,7 +14,6 @@ namespace Epam.TestAutomation.Tests
         public void OneTimeSetUp()
         {
             Logger.InitLogger(TestContext.CurrentContext.Test.Name, TestContext.CurrentContext.TestDirectory);
-
         }
 
         [SetUp]
