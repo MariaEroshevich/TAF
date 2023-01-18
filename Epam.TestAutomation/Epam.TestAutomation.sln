@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Core", "Epam.TestAutomation\Epam.TestAutomation.Core.csproj", "{C28B174E-8BE2-4466-970E-FAD1B0915B46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Utilities", "Epam.TestAutomation.Utilities\Epam.TestAutomation.Utilities.csproj", "{D1422E36-1558-40F5-A3DC-AA1D661066A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Web", "Epam.TestAutomation.Web\Epam.TestAutomation.Web.csproj", "{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Tests", "Epam.TestAutomation.Tests\Epam.TestAutomation.Tests.csproj", "{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.TestData", "Epam.TestAutomation.TestData\Epam.TestAutomation.TestData.csproj", "{CEBC606A-9A57-4909-87CC-3A52BD87365E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.TestAutomation.BDD", "Epam.TestAutomation.BDD\Epam.TestAutomation.BDD.csproj", "{74A9D01B-BB7E-43C5-80D8-B3407796728A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C28B174E-8BE2-4466-970E-FAD1B0915B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28B174E-8BE2-4466-970E-FAD1B0915B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28B174E-8BE2-4466-970E-FAD1B0915B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28B174E-8BE2-4466-970E-FAD1B0915B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1422E36-1558-40F5-A3DC-AA1D661066A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1422E36-1558-40F5-A3DC-AA1D661066A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1422E36-1558-40F5-A3DC-AA1D661066A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1422E36-1558-40F5-A3DC-AA1D661066A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA321D9-FEFD-4ADC-B36E-F64D29B9BFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3DE5F0-6D0F-4290-85FE-41A91A185C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2164B3CA-68E2-4B4D-A830-3A9EACFFD501}
+	EndGlobalSection
+EndGlobal
