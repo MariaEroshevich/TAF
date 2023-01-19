@@ -8,7 +8,7 @@ namespace ReportPortal.TestAutomation.Utilities.Parser
 
         public static string SerializeJson(object content) => JsonConvert.SerializeObject(content);
 
-        public static List<T> DeserializeJsonToObjects<T>(string json) where T : class => JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(json));
+        public static List<T> DeserializeJsonToObjects<T>(string json) where T : class => JsonConvert.DeserializeObject<List<T>>(json);
 
     }
 }

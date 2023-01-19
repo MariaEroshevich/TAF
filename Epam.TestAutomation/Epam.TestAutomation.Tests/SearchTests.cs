@@ -1,4 +1,5 @@
-﻿using Epam.TestAutomation.TestData.Models;
+﻿using Epam.TestAutomation.Helper;
+using Epam.TestAutomation.TestData.Models;
 using Epam.TestAutomation.Utils;
 using Epam.TestAutomation.Web.PageObjects.Pages;
 using NUnit.Framework;
@@ -43,7 +44,7 @@ namespace Epam.TestAutomation.Tests
 
         private static List<SearchModel> GetSearcInformation()
         {
-            return JsonParser.DeserializeJsonToObjects<SearchModel>(@"C:\Users\Maryia_Yerashevich\IT-Academy\Repositories\TAF\Epam.TestAutomation\Epam.TestAutomation.TestData\Search.json");
+            return JsonParser.DeserializeJsonToObjects<SearchModel>(File.ReadAllText($"{TestSettings.DataDir}\\Search.json"));
         }
     }
 }

@@ -22,6 +22,8 @@ namespace Epam.TestAutomation.Helper
 
         public static string ApplicationUrl => TestContext.Parameters.Get("ApplicationUrl").ToString();
 
+        public static string DataDir => Path.Combine(Directory.GetCurrentDirectory(), TestContext.Parameters.Get("TestDataFolder").ToString());
+        
         #endregion
 
     }

@@ -1,4 +1,5 @@
 ﻿using Epam.TestAutomation.Core.Browser;
+using Epam.TestAutomation.Helper;
 using Epam.TestAutomation.TestData.Models;
 using Epam.TestAutomation.Utils;
 using Epam.TestAutomation.Web.PageObjects.Pages;
@@ -42,7 +43,7 @@ namespace Epam.TestAutomation.Tests
 
         private static List<FooterLinkModel> GetFooterLinks()
         {
-            return JsonParser.DeserializeJsonToObjects<FooterLinkModel>(@"C:\Users\Maryia_Yerashevich\IT-Academy\Repositories\TAF\Epam.TestAutomation\Epam.TestAutomation.TestData\FooterLinks.json").ToList();
+            return JsonParser.DeserializeJsonToObjects<FooterLinkModel>(File.ReadAllText($"{TestSettings.DataDir}\\FooterLinks.json")).ToList();
         }
     }
 }
