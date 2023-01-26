@@ -10,5 +10,9 @@
 		<Parameter name ="ApplicationUrl" value="https://www.epam.com/"/>
 		<Parameter name ="TestDataFolder" value="TestFiels"/>
 	</TestRunParameters>
+
+	<NUnit>
+		<NumberOfTestWorkers>6</NumberOfTestWorkers>
+	</NUnit>
 </RunSettings>
 
