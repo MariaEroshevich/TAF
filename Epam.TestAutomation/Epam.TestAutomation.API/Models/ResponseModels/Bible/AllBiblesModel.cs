@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-
-namespace Epam.TestAutomation.API.Models.ResponseModels
+﻿namespace Epam.TestAutomation.API.Models.ResponseModels.Bible
 {
     public class AllBiblesModel
     {

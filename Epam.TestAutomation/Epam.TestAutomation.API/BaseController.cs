@@ -21,11 +21,23 @@ namespace Epam.TestAutomation.API
             }
         }
 
-        protected (RestResponse Response, T Bibles) Get<T>(string resource)
+        protected (RestResponse Response, T ResponseModel) Get<T>(string resource)
         {
             var request = new RestRequest(resource, Method.Get);
             var response = _restClient.ExecuteGet(request);
 
+            return (typeof(T) == typeof(RestResponse))
+                ? (response, default)
+                : (response, GetDeserializedView<T>(response));
+        }
+
+        protected (RestResponse Response, T ResponseModel) Post<T, TPayload>(string resource, TPayload? payload = null) where TPayload : class
+        {
+            var request = new RestRequest(resource, Method.Post);
+            if (payload != null)
+                request.AddJsonBody(payload);
+
+            var response = _restClient.ExecutePost(request);
             return (typeof(T) == typeof(RestResponse))
                 ? (response, default)
                 : (response, GetDeserializedView<T>(response));
