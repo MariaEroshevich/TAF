@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Epam.TestAutomation.API.Models.ResponseModels;
+using Epam.TestAutomation.API.Models.ResponseModels.Bible;
 using RestSharp;
 
 namespace Epam.TestAutomation.API.Controllers

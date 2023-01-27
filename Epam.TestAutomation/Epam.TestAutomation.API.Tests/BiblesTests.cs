@@ -8,6 +8,7 @@ using Epam.TestAutomation.API.Controllers;
 using Epam.TestAutomation.API.Models.ResponseModels;
 using NUnit.Framework;
 using RestSharp;
+using AllBiblesModel = Epam.TestAutomation.API.Models.ResponseModels.Bible.AllBiblesModel;
 
 namespace Epam.TestAutomation.API.Tests
 {
