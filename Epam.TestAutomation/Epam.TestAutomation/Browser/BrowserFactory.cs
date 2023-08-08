@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Epam.TestAutomation.Helper;
+﻿using Epam.TestAutomation.Helper;
 
 namespace Epam.TestAutomation.Core.Browser
 {

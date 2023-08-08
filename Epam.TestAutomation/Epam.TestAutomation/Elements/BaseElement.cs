@@ -31,6 +31,7 @@ namespace Epam.TestAutomation.Elements
 
         public virtual void Click()
         {
+            Logger.Info("Click to element");
             OriginalWebElement.Click();
         }
 
