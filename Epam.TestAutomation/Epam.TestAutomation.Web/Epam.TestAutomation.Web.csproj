@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Epam.TestAutomation\Epam.TestAutomation.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="BusinessOperations\" />
-  </ItemGroup>
-
 </Project>

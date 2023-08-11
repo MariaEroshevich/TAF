@@ -1,24 +1,18 @@
 ﻿using Epam.TestAutomation.Web.PageObjects.Pages;
+using Epam.TestAutomation.Web.Steps;
 using NUnit.Framework;
 
 namespace Epam.TestAutomation.Tests
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.All)]
     public class MainPageTests : BaseTest
     {
-        private MainPage _mainPage;
-
-        [SetUp]
-        public void SetUp()
-        {
-            _mainPage = new MainPage();
-        }
-
         [Test]
-        public void MainPageIsOpenedTest()
+        public void MainPageIsOpenTest()
         {
-            Assert.IsTrue(_mainPage.Title.IsDisplayed(), "Page doesn't open");
+            var header = _mainPageSteps.GetHeaderText();
+
+            Assert.AreEqual("Start your IT journey with us", header);
         }
     }
 }

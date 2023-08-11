@@ -2,12 +2,14 @@
 using Epam.TestAutomation.Helper;
 using Epam.TestAutomation.Utilities.Logger;
 using Epam.TestAutomation.Utils;
+using Epam.TestAutomation.Web.Steps;
 using NUnit.Framework;
 
 namespace Epam.TestAutomation.Tests
 {
     public abstract class BaseTest
     {
+        protected MainPageSteps _mainPageSteps;
         public TestContext TestContext { get; set; }
 
         [OneTimeSetUp]
@@ -19,10 +21,11 @@ namespace Epam.TestAutomation.Tests
         [SetUp]
         public virtual void BeforeTest()
         {
+            _mainPageSteps = new MainPageSteps();
             Logger.Info("Test begin");
             BrowserFactory.Browser.GotToUrl(TestSettings.ApplicationUrl);
-            BrowserFactory.Browser.Refresh();
-            Waiters.WaitForPageLoad();
+            Waiters.WaitForPageLoad(TimeSpan.FromSeconds(10));
+            _mainPageSteps.AcceptAllCookie();
         }
 
         [TearDown]
@@ -31,7 +34,8 @@ namespace Epam.TestAutomation.Tests
             if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
             {
                 Logger.Info("Test is failed");
-                BrowserFactory.Browser.SaveScreenshoot(TestContext.CurrentContext.Test.MethodName, Path.Combine(TestContext.CurrentContext.TestDirectory, TestSettings.ScreenShotPath));
+                BrowserFactory.Browser.SaveScreenshoot(TestContext.CurrentContext.Test.MethodName, 
+                    Path.Combine(TestContext.CurrentContext.TestDirectory, TestSettings.ScreenShotPath));
             }
             Logger.Info("Test finish");
             BrowserFactory.Browser.Quit();

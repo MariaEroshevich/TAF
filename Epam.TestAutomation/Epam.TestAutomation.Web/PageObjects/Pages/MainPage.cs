@@ -1,22 +1,16 @@
-﻿using Epam.TestAutomation.Core.BasePage;
+﻿
 using Epam.TestAutomation.Elements;
 using Epam.TestAutomation.Web.PageObjects.Panels;
 using OpenQA.Selenium;
 
 namespace Epam.TestAutomation.Web.PageObjects.Pages
 {
-    public class MainPage :BasePage
+    public class MainPage
     {
-        public Label Title => new Label(By.TagName("h2"));
+        public Label Header => new Label(By.XPath("//*[@class ='main-page-header_journey-header__1R0pX']"));
 
-        public FooterBlock FooterBlock => new FooterBlock(By.XPath("//*[@class='footer section']"));
+        public HeaderPanel HeaderPanel => new HeaderPanel(By.XPath("//*[@class ='nav-bar_main-menu__hloxm']"));
 
-        public HeaderBlock HeaderBlock => new HeaderBlock(By.XPath("//*[@class = 'header__content']"));
-
-        public override bool IsOpened()
-        {
-            throw new NotImplementedException();
-        }
-
+        public CookiePanel CookiePanel => new CookiePanel(By.Id("onetrust-banner-sdk"));
     }
 }

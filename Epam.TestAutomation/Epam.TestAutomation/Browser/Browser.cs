@@ -109,7 +109,7 @@ namespace Epam.TestAutomation.Core.Browser
 
         #region Waiters
 
-        public WebDriverWait Waiters() => new WebDriverWait(_driver, TestSettings.WebDriverTimeOut);
+        public WebDriverWait Waiters(TimeSpan wait) => new WebDriverWait(_driver, wait);
 
         public Actions Action => new Actions(_driver);
 

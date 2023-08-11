@@ -5,13 +5,13 @@ namespace Epam.TestAutomation.Utils
 {
     public static class Waiters
     {
-        public static void WaitForPageLoad() => BrowserFactory.Browser.Waiters().Until(condition => BrowserFactory.Browser.ExecuteScript("return document.readyState").Equals("complete"));
+        public static void WaitForPageLoad(TimeSpan wait) => BrowserFactory.Browser.Waiters(wait).Until(condition => BrowserFactory.Browser.ExecuteScript("return document.readyState").Equals("complete"));
         
-        public static void WaitForCondition(Func<bool> condition) => BrowserFactory.Browser.Waiters().Until(x => condition.Invoke());
+        public static void WaitForCondition(Func<bool> condition, TimeSpan wait) => BrowserFactory.Browser.Waiters(wait).Until(x => condition.Invoke());
 
-        public static void WaitSpinner()
+        public static void WaitSpinner(TimeSpan wait)
         {
-            BrowserFactory.Browser.Waiters().Until(x => !BrowserFactory.Browser.FindElement(By.XPath("//div[contains(@class,'grid__spinner')]")).Displayed);
+            BrowserFactory.Browser.Waiters(wait).Until(x => !BrowserFactory.Browser.FindElement(By.XPath("//div[contains(@class,'grid__spinner')]")).Displayed);
         }
     }
 }
