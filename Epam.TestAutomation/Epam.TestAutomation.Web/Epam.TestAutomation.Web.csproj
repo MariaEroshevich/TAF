@@ -14,4 +14,8 @@
     <Folder Include="BusinessOperations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />
+  </ItemGroup>
+
 </Project>

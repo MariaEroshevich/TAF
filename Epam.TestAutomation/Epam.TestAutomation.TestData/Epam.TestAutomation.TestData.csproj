@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="TestFiels\FooterLinks.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
