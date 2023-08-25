@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    parameters
+    {
+        string(defaultValue: 'Chrome', name: 'Browser') 
+        string(defaultValue: '60', name: 'WebDriverTimeOut') 
+        string(defaultValue: '80', name: 'WaitElementTimeOut')
+        string(defaultValue: '\\Screenshots', name: 'ScreenShotPath')
+        string(defaultValue: 'Logs\\Logs.txt', name: 'LogsPath')
+        string(defaultValue: 'https://www.epam.com/', name: 'ApplicationUrl')
+        string(defaultValue: 'TestFiels', name: 'TestDataFolder')
+    }
+    stages {
+        stage ('TestSetup')
+        {
+            steps 
+            {
+                git branch: 'page_objects', changelog: false, credentialsId: '2596522e-d560-4aae-916e-d79f31424a67', poll: false, url: 'https://github.com/MariaEroshevich/TAF.git'
+            }
+        }
+        stage ('Build')
+        {
+            steps
+            {
+                bat 'dotnet msbuild %WORKSPACE%\\Epam.TestAutomation\\Epam.TestAutomation.sln -t:Restore /p:RestoreSources=https://api.nuget.org/v3/index.json /tv:Current /t:Rebuild /p:Configuration=Release'
+            }
+        }
+        stage ('Tests run')
+        {
+            steps
+            {
+                bat 'dotnet test %WORKSPACE%\\Epam.TestAutomation\\Epam.TestAutomation.Tests\\Epam.TestAutomation.Tests.csproj -- TestRunParameters.Parameter(name=\"ApplicationUrl\", value=\"%ApplicationUrl%\") -- TestRunParameters.Parameter(name=\"Browser\", value=\"%Browser%\") -- TestRunParameters.Parameter(name=\"WebDriverTimeOut\", value=\"%WebDriverTimeOut%\") -- TestRunParameters.Parameter(name=\"WaitElementTimeOut\", value=\"%WaitElementTimeOut%\") -- TestRunParameters.Parameter(name=\"ScreenShotPath\", value=\"%ScreenShotPath%\") -- TestRunParameters.Parameter(name=\"LogsPath\", value=\"%LogsPath%\") -- TestRunParameters.Parameter(name=\"TestDataFolder\", value=\"%TestDataFolder%\")'
+            }
+        }
+    }
+}
