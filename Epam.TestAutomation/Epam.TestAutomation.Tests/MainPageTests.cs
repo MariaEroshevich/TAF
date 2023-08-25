@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace Epam.TestAutomation.Tests
 {
+    [Parallelizable(ParallelScope.All)]
     [TestFixture]
     public class MainPageTests : BaseTest
     {
