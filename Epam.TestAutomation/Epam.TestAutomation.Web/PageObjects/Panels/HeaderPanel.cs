@@ -9,5 +9,7 @@ namespace Epam.TestAutomation.Web.PageObjects.Panels
         public HeaderPanel(By locator) : base(locator) { }
 
         public ReadOnlyCollection<IWebElement> NavigationMenuItems => FindElements(By.CssSelector("[class*='nav-bar_menu-items']"));
+
+        public Button SearchButton => new Button(By.CssSelector(".search-icon"));
     }
 }

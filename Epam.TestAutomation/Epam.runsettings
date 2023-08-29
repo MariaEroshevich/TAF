@@ -7,7 +7,7 @@
 		<Parameter name ="WaitElementTimeOut" value="80" />
 		<Parameter name ="ScreenShotPath" value="\Screenshots" />
 		<Parameter name ="LogsPath" value="Logs\Logs.txt" />
-		<Parameter name ="ApplicationUrl" value="https://training.by/en"/>
+		<Parameter name ="ApplicationUrl" value="https://www.epam.com/"/>
 		<Parameter name ="TestDataFolder" value="TestFiels"/>
 	</TestRunParameters>
 

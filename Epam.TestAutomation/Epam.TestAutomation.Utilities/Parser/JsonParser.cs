@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ReportPortal.TestAutomation.Utilities.Parser
+namespace Epam.TestAutomation.Utilities.Parser
 {
     public static class JsonParser
     {
