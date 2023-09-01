@@ -27,7 +27,7 @@ namespace Epam.TestAutomation.Tests
         public void InformationPageIsOpened(SearchModel search)
         {
             Thread.Sleep(2000);
-            _mainPage.AcceptAllCookiesButton.Click();
+            _mainPage.AcceptAllCookies();
 
             _mainPage.HeaderBlock.SearchButton.Click();
             _mainPage.HeaderBlock.SearchBlock.SearchInput.SendKeys(search.SearchPhrase);

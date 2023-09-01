@@ -33,7 +33,7 @@ namespace Epam.TestAutomation.Tests
             _informationPage = new InformationPage();
 
             Thread.Sleep(2000);
-            _mainPage.AcceptAllCookiesButton.Click();
+            _mainPage.AcceptAllCookies();
             BrowserFactory.Browser.ScrollToElement(_mainPage.FooterBlock.OriginalWebElement);
             _mainPage.FooterBlock.GetFooterLinkByName(linkName.FooterLink).Click();
             Waiters.WaitForCondition(() => _informationPage.Title.IsDisplayed());

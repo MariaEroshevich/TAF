@@ -23,7 +23,7 @@ namespace Epam.TestAutomation.Tests
         public void EpamContimuumPageIsOpenedTest()
         {
             Thread.Sleep(2000);
-            _mainPage.AcceptAllCookiesButton.Click();
+            _mainPage.AcceptAllCookies();
 
             BrowserFactory.Browser.ScrollToElement(_mainPage.FooterBlock.OriginalWebElement);
             _mainPage.FooterBlock.EpamContinuumLinks.Click();

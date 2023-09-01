@@ -6,6 +6,8 @@ namespace Epam.TestAutomation.Web.PageObjects.Pages
 {
     public class SearchResultsPage : BasePage
     {
+        public override string URL => "https://www.epam.com/search?q=";
+
         public ElementsList<Link> SearchResultLinks => new ElementsList<Link>(By.ClassName("search-results__title-link"));
 
         public Link GetSearchResultLinkByName(string linkName)
